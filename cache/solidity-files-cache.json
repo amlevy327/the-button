@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/andrewmlevy/Documents/blockchain/4_portfolio_projects/the-button/contracts/Claim.sol": {
+      "lastModificationDate": 1647911756602,
+      "contentHash": "9db464a29382d398402b3cafa89e25e0",
+      "sourceName": "contracts/Claim.sol",
+      "solcConfig": {
+        "version": "0.8.11",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "Claim"
+      ]
+    }
+  }
+}
