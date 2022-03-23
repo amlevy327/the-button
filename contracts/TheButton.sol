@@ -2,15 +2,17 @@
 
 /// @title The Pog ERC-721 token
 
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 pragma solidity ^0.8.6;
 
-contract Claim {
+contract TheButton is Ownable {
   
-  uint256 depositAmount; // in eth
-  uint256 blocksToPass = 3;
+  uint256 public depositAmount; // in eth
+  uint256 public blocksToPass = 3;
 
-  address lastDepositAddress;
-  uint256 lastDepositTimestamp;
+  address public lastDepositAddress;
+  uint256 public lastDepositTimestamp;
 
   event ButtonPressed(address lastDepositAddress, uint256 lastDepositTimestamp, uint256 currentDepositTotal);
   event TreasureClaimed(address winner, uint256 amount);
@@ -44,6 +46,7 @@ contract Claim {
     payable(msg.sender).transfer(address(this).balance);
     // reset variables
     reset_vars();
+    // emit event
     emit TreasureClaimed(msg.sender, currentBalance);
   }
 
